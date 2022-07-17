@@ -1,0 +1,113 @@
+.rules {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rules-header {
+  background-color: white;
+  color: rgb(78, 72, 72);
+  padding: 6px 13px;
+  font-size: 25px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.61);
+  cursor: pointer;
+}
+
+.rules-header:hover {
+  animation: shake 3s infinite;
+}
+
+.rules-paragraphs {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.61);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.rules-header:hover ~ .rules-paragraphs {
+  opacity: 100%;
+}
+
+.rules-hidden {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85vh;
+  width: 70vw;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.61);
+  border-radius: 6px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-hidden-header {
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.rules-hidden-paragraph {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hidden-rules-batton {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+@keyframes shake {
+  20% {
+    transform: rotate(30deg);
+  }
+
+  40% {
+    transform: rotate(-30deg);
+  }
+
+  60% {
+    transform: rotate(30deg);
+  }
+
+  80% {
+    transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .rules {
+    right: 10%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .rules {
+    right: 5%;
+  }
+}

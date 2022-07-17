@@ -1,0 +1,31 @@
+.word-line {
+  display: flex;
+  gap: 5px;
+}
+
+.word-letter {
+  margin-top: 5px;
+  width: 65px;
+  height: 65px;
+  border: 2px solid grey;
+  background-color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+.correct {
+  background-color: rgb(45, 204, 45);
+  color: white;
+}
+
+.includes {
+  background-color: rgb(255, 255, 68);
+}
+
+.incorrect {
+  background-color: rgb(206, 194, 194);
+}
